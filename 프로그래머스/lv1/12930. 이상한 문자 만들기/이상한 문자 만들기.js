@@ -1,15 +1,15 @@
 function solution(s) {
     var answer = '';
-    var temp = s.split(" ");
-    for (var i in temp) {
-        for (var j in temp[i]) {
-            if (j%2 !== 0) {
-                answer += temp[i][j].toLowerCase();
-            } else {
-                answer += temp[i][j].toUpperCase();
-            }
+    let arr = s.split(" ")
+    
+    for ( let i =0; i<arr.length; i++) {
+        for (let j =0; j<arr[i].length; j++) {
+            if (j % 2 == 0) {
+               answer += arr[i][j].toUpperCase()
+            } else answer += arr[i][j].toLowerCase()
         }
-        answer += " ";
+        answer += " "
     }
-    return answer.slice(0, -1);
+    
+    return answer.slice(0, -1)
 }
