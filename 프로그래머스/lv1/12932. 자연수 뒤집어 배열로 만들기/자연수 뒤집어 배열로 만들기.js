@@ -1,8 +1,5 @@
 function solution(n) {
     var answer = [];
-    var temp = n.toString().split("").map(Number)
-    temp.sort(function(a, b)  {
-        return b - a;
-    });
-    return temp;
+    answer = n.toString().split("").reverse().map(v=> +v)
+    return answer
 }
