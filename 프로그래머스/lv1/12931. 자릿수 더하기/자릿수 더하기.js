@@ -1,12 +1,10 @@
-function solution(n)
-{
+function solution(n){
     var answer = 0;
-    var temp = n.toString()
-
-    for (let i=0; i < temp.length; i++) {
-        answer += parseInt(temp[i])
+    let sum=0;
+    let arr = n.toString().split("")
+    console.log(arr)
+    for (let i =0; i < arr.length; i++) {
+        sum += parseInt(arr[i])
     }
-
-
-    return answer;
+    return sum
 }
