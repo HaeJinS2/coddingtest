@@ -1,5 +1,5 @@
 function solution(board) {
-    var answer = 0;
+    var answer = [];
     let arr = []
     let total = board.length * board[0].length
 
@@ -19,7 +19,6 @@ function solution(board) {
         }
     }
 
-    let dangerZone = Array.from(new Set(arr.map(JSON.stringify)), JSON.parse);
-    answer = total - dangerZone.length;
-    return answer;
+    answer = Array.from(new Set(arr.map(JSON.stringify)), JSON.parse);
+    return total - answer.length;
 }
